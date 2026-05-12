@@ -1,5 +1,4 @@
-<!doctype html>
-<script type="application/json" id="cowork-artifact-meta">
+<!doctype html><script type="application/json" id="cowork-artifact-meta">
 {
   "name": "Daily Ops Digest",
   "schemaVersion": 1,
@@ -18,35 +17,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WEMEDIA 每日工作日報</title>
 <style>
-:root {
-  color-scheme: light;
-  --bg: #faf7f2;
-  --card: #ffffff;
-  --ink: #1f2937;
-  --ink-soft: #6b7280;
-  --line: #ece8df;
-  --peach: #fb923c;
-  --peach-soft: #ffedd5;
-  --sage: #84cc16;
-  --sage-soft: #ecfccb;
-  --sky: #0ea5e9;
-  --sky-soft: #e0f2fe;
-  --pink: #ec4899;
-  --pink-soft: #fce7f3;
-  --lilac: #a78bfa;
-  --lilac-soft: #ede9fe;
-  --amber: #f59e0b;
-  --amber-soft: #fef3c7;
-  --rose: #f43f5e;
-  --rose-soft: #ffe4e6;
-}
+:root { color-scheme: light; --bg: #faf7f2; --card: #ffffff; --ink: #1f2937; --ink-soft: #6b7280; --line: #ece8df; --peach: #fb923c; --peach-soft: #ffedd5; --sage: #84cc16; --sage-soft: #ecfccb; --sky: #0ea5e9; --sky-soft: #e0f2fe; --pink: #ec4899; --pink-soft: #fce7f3; --lilac: #a78bfa; --lilac-soft: #ede9fe; --amber: #f59e0b; --amber-soft: #fef3c7; --rose: #f43f5e; --rose-soft: #ffe4e6; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; font-size: 13px; line-height: 1.5; }
 body { padding: 18px 22px 36px; max-width: 1400px; margin: 0 auto; }
 .mono { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
 a { color: var(--sky); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
 .hello { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 50%, #ecfccb 100%); border-radius: 18px; margin-bottom: 18px; }
 .hello .left h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
 .hello .left p { margin: 4px 0 0; color: var(--ink-soft); font-size: 12px; }
@@ -54,10 +31,8 @@ a:hover { text-decoration: underline; }
 .tag { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.9); border-radius: 99px; font-size: 11px; color: var(--ink); }
 .tag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.5); animation: pulse 1.8s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.6); } 70% { box-shadow: 0 0 0 7px rgba(132, 204, 22, 0); } 100% { box-shadow: 0 0 0 0 rgba(132, 204, 22, 0); } }
-
 .notice { padding: 10px 14px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; font-size: 12px; color: #92400e; margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }
 .notice .ic { width: 22px; height: 22px; border-radius: 50%; background: #fde68a; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; color: #92400e; }
-
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.03); overflow: hidden; }
 .card-head { padding: 14px 18px 8px; display: flex; justify-content: space-between; align-items: baseline; }
 .card-head h2 { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; }
@@ -69,14 +44,12 @@ a:hover { text-decoration: underline; }
 .card-head .num.n5 { background: var(--pink-soft); color: var(--pink); }
 .card-head .meta { font-size: 11px; color: var(--ink-soft); }
 .card-body { padding: 6px 18px 18px; }
-
 .grid { display: grid; gap: 14px; }
 .row0 { grid-template-columns: 1fr; margin-bottom: 14px; }
 .row1 { grid-template-columns: 1.4fr 1fr; }
 .row4 { grid-template-columns: 1fr; margin-top: 14px; }
 .row6 { grid-template-columns: 1fr; margin-top: 14px; }
 @media (max-width: 1100px) { .row1 { grid-template-columns: 1fr; } }
-
 .todo-summary { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
 .todo-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 99px; font-size: 11.5px; font-weight: 600; }
 .todo-pill .num { font-family: ui-monospace, monospace; font-weight: 700; }
@@ -84,7 +57,6 @@ a:hover { text-decoration: underline; }
 .todo-pill.three { background: var(--amber-soft); color: #92400e; }
 .todo-pill.week { background: var(--sky-soft); color: #075985; }
 .todo-source { margin-left: auto; font-size: 10.5px; color: var(--ink-soft); }
-
 .todo-groups { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
 @media (max-width: 1000px) { .todo-groups { grid-template-columns: 1fr; } }
 .todo-group { background: #fafaf6; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
@@ -115,11 +87,9 @@ a:hover { text-decoration: underline; }
 .todo-item .team-tag.m { background: #e0f2fe; color: #075985; }
 .todo-item .dl { font-family: ui-monospace, monospace; }
 .todo-item.empty-bucket { padding: 24px 14px; text-align: center; color: var(--ink-soft); font-size: 11.5px; }
-
 .mgr-banner { margin-top: 14px; padding: 12px 16px; background: linear-gradient(135deg, #ecfccb, #f0f9ff); border: 1px dashed #bef264; border-radius: 12px; font-size: 12px; color: var(--ink); display: flex; gap: 12px; align-items: center; }
 .mgr-banner .ic { font-size: 22px; flex-shrink: 0; }
 .mgr-banner b { color: #4d7c0f; }
-
 .ah-block { padding: 14px 16px; border-radius: 14px; border: 1px solid #fbbf24; background: linear-gradient(135deg, #fef3c7 0%, #fff7ed 100%); }
 .ah-title { font-size: 13px; font-weight: 700; color: var(--ink); margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
 .ah-title .ic { font-size: 16px; }
@@ -134,7 +104,6 @@ a:hover { text-decoration: underline; }
 .ah-item .body .hint { font-size: 10.5px; color: var(--ink-soft); }
 .ah-fallback { margin-top: 12px; padding: 10px 14px; background: rgba(255,255,255,0.7); border-left: 3px solid #c4b5fd; border-radius: 8px; font-size: 11.5px; color: var(--ink); line-height: 1.5; }
 .ah-fallback b { color: #6d28d9; }
-
 .ip-tabs { display: flex; gap: 6px; padding: 0 0 12px; overflow-x: auto; }
 .ip-tabs::-webkit-scrollbar { height: 0; }
 .ip-tab { flex: 0 0 auto; padding: 8px 14px; background: #fafaf6; border: 1px solid var(--line); border-radius: 12px; cursor: pointer; transition: all 0.15s; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 110px; }
@@ -153,7 +122,6 @@ a:hover { text-decoration: underline; }
 .ip-tab .pill-num { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 16px; padding: 0 5px; background: var(--peach); color: #fff; border-radius: 99px; font-size: 10px; font-weight: 700; }
 .ip-tab.zero .pill-num { background: var(--sage); }
 .ip-tab.awaiting .pill-num { background: var(--sky); }
-
 .ip-pane { min-height: 420px; padding: 4px 0 0; }
 .ip-meta { display: flex; justify-content: space-between; align-items: center; padding: 4px 2px 12px; font-size: 11px; color: var(--ink-soft); gap: 12px; flex-wrap: wrap; }
 .ip-meta .pager { display: flex; gap: 6px; align-items: center; }
@@ -161,7 +129,6 @@ a:hover { text-decoration: underline; }
 .ip-meta .pager button:disabled { opacity: 0.35; cursor: not-allowed; }
 .ip-meta .pager button:hover:not(:disabled) { background: #fafaf6; }
 .ip-meta .pager .pn { font-family: ui-monospace, monospace; font-size: 10.5px; color: var(--ink-soft); }
-
 .ed-list { display: flex; flex-direction: column; gap: 8px; }
 .ed-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 11px 13px; background: #fafaf6; border: 1px solid var(--line); border-radius: 12px; }
 .ed-row .left .t { font-size: 12.5px; font-weight: 600; color: var(--ink); line-height: 1.35; }
@@ -183,7 +150,6 @@ a:hover { text-decoration: underline; }
 .stage-pill.s3 { background: var(--sky-soft); color: #075985; }
 .stage-pill.s4 { background: var(--lilac-soft); color: #6d28d9; }
 .stage-pill.s5 { background: var(--sage-soft); color: #4d7c0f; }
-
 .stepper { display: flex; align-items: center; gap: 0; min-width: 220px; }
 .step-node { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 0 0 auto; }
 .step-node .dot { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 1.5px solid var(--line); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
@@ -197,19 +163,13 @@ a:hover { text-decoration: underline; }
 .step-line { flex: 1; height: 2px; background: var(--line); margin: 0 2px; min-width: 14px; align-self: flex-start; margin-top: 8px; transition: all 0.2s; }
 .step-line.done { background: var(--sage); }
 @keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5); } 50% { box-shadow: 0 0 0 5px rgba(245, 158, 11, 0); } }
-
-@media (max-width: 1100px) {
-  .ed-row { grid-template-columns: 1fr; }
-  .stepper { min-width: 0; width: 100%; margin-top: 8px; }
-}
-
+@media (max-width: 1100px) { .ed-row { grid-template-columns: 1fr; } .stepper { min-width: 0; width: 100%; margin-top: 8px; } }
 .empty-state { padding: 40px 20px; text-align: center; background: #fafaf6; border: 1px dashed var(--line); border-radius: 12px; }
 .empty-state .icon { font-size: 32px; margin-bottom: 8px; }
 .empty-state .title { font-weight: 700; color: #4d7c0f; font-size: 14px; margin-bottom: 4px; }
 .empty-state .sub { font-size: 11.5px; color: var(--ink-soft); }
 .empty-state .done-list { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .empty-state .done-tag { padding: 4px 10px; background: var(--sage-soft); color: #4d7c0f; border-radius: 99px; font-size: 11px; font-weight: 500; }
-
 .awaiting-state { padding: 30px 20px; text-align: center; background: linear-gradient(135deg, #f0f9ff, #ede9fe); border: 1px dashed #93c5fd; border-radius: 12px; }
 .awaiting-state .icon { font-size: 32px; margin-bottom: 8px; }
 .awaiting-state .title { font-weight: 700; color: #075985; font-size: 14px; margin-bottom: 4px; }
@@ -220,7 +180,6 @@ a:hover { text-decoration: underline; }
 .awaiting-state .phase-card .row .v { color: var(--ink); font-weight: 700; }
 .awaiting-state .next-dl { margin-top: 12px; font-size: 11px; color: #075985; padding: 6px 12px; background: rgba(255,255,255,0.7); border-radius: 99px; display: inline-block; }
 .awaiting-state .next-dl b { font-family: ui-monospace, monospace; }
-
 .mtitle { font-size: 11px; color: var(--ink-soft); letter-spacing: 0.06em; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
 .mtitle b { color: var(--ink); font-weight: 700; font-size: 12px; letter-spacing: 0; }
 .dualbar { position: relative; height: 10px; background: #f3f4f6; border-radius: 99px; overflow: hidden; margin-bottom: 4px; }
@@ -234,12 +193,10 @@ a:hover { text-decoration: underline; }
 .subtrack-label { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--ink-soft); margin-bottom: 4px; }
 .subtrack-label b { color: var(--ink); font-weight: 700; font-size: 11px; }
 .mhint { padding: 10px 12px; background: #f0f9ff; border-radius: 10px; font-size: 11.5px; color: #075985; line-height: 1.5; margin-top: 4px; }
-
 .delta { display: inline-flex; align-items: center; gap: 3px; padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 700; }
 .delta.up { background: var(--sage-soft); color: #4d7c0f; }
 .delta.down { background: var(--rose-soft); color: #be123c; }
 .delta.flat { background: #f3f4f6; color: #4b5563; }
-
 .algo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 @media (max-width: 900px) { .algo { grid-template-columns: 1fr; } }
 .platform { background: #fafaf6; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
@@ -260,7 +217,6 @@ a:hover { text-decoration: underline; }
 .p-source .src { display: block; color: var(--ink); }
 .p-source .src .date { color: var(--ink-soft); font-family: ui-monospace, monospace; margin-right: 6px; }
 .p-source .src a { color: var(--sky); }
-
 .foot { margin-top: 16px; font-size: 11px; color: var(--ink-soft); text-align: center; }
 .foot a { color: var(--sky); text-decoration: none; }
 </style>
@@ -270,93 +226,74 @@ a:hover { text-decoration: underline; }
 <div class="hello">
   <div class="left">
     <h1>早安 ☀ 今日工作日報</h1>
-    <p id="hello-date">2026-05-04 星期一 · 第 19 週 · Q2</p>
+    <p id="hello-date">2026-05-12 星期二 · 第 20 週 · Q2</p>
   </div>
   <div class="right">
     <span class="tag"><span class="dot"></span>每日 09:00 自動更新</span>
-    <span class="tag" style="background:#fef3c7;">v12.9 · W18 進行中已回填</span>
+    <span class="tag" style="background:#fef3c7;">v13.3 · 對齊 5/11 表格實況</span>
   </div>
 </div>
 
 <div class="notice">
   <span class="ic">i</span>
-  <span><b>v12.9（5/4 同步）：</b>W18 進行中已回填 → 腳本 20 支（雨暘 10 + 年裕 10）、影片 25 支（丹哥 10 + 翰哥 9 + 雨暘 6）；5 月累積完成仍 0/80。其他：雨暘 N2 已交付 ✓，待辦 1/2/1，明天 5/5 雨暘 N3 選題確認 DL。</span>
+  <span><b>v13.3（5/11 同步）：</b>對齊專案總表 + 剪輯總表最新狀態 → 雨暘第一期已全數完檔（隱藏完稿清單）、第二期 11 支進行中；已結案 / 培訓案專案隱藏；待辦事項聚焦進行中專案的第三期相關項目；5 月累積口徑：「上架日 ≥ 5/1 且完檔＝TRUE」，目前影片 13/80（16.3%）、腳本 7/80（8.75%）。</span>
 </div>
 
 <div class="grid row0">
   <section class="card">
     <div class="card-head">
       <h2><span class="num n1">01</span>待辦事項（依緊急度）</h2>
-      <span class="meta">當天 1 件 · 三天內 2 件 · 當週 1 件 · 同步 2026-05-04 14:00</span>
+      <span class="meta">當天 2 件 · 三天內 2 件 · 當週 1 件 · 同步 2026-05-12 09:00</span>
     </div>
     <div class="card-body">
       <div class="todo-summary">
-        <span class="todo-pill today">🔴 當天提醒 <span class="num">1</span></span>
+        <span class="todo-pill today">🔴 當天提醒 <span class="num">2</span></span>
         <span class="todo-pill three">🟠 三天內須完成 <span class="num">2</span></span>
         <span class="todo-pill week">🔵 當週需完成 <span class="num">1</span></span>
-        <span class="todo-source">資料源：專案總表 + 主管任務表</span>
+        <span class="todo-source">資料源：專案總表 + 主管任務表（5/12 同步）</span>
       </div>
-
       <div class="todo-groups">
-
         <div class="todo-group today">
-          <div class="todo-group-head">
-            <span class="ic">🔴</span><span>當天提醒（過 / 今日 DL）</span><span class="cnt">1 件</span>
-          </div>
+          <div class="todo-group-head"><span class="ic">🔴</span><span>當天提醒（過 / 今日 DL）</span><span class="cnt">2 件</span></div>
           <div class="todo-list">
             <div class="todo-item">
-              <div class="row1l"><span class="ip">年裕</span><span class="age">過 7 天</span></div>
-              <span class="task">N2 第一支影片提供</span>
-              <div class="meta-line">
-                <span class="team-tag e">剪輯</span>
-                <span class="dl">DL 2026-04-27</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="todo-group three">
-          <div class="todo-group-head">
-            <span class="ic">🟠</span><span>三天內須完成</span><span class="cnt">2 件</span>
-          </div>
-          <div class="todo-list">
-            <div class="todo-item">
-              <div class="row1l"><span class="ip">雨暘</span><span class="age">1 天後</span></div>
-              <span class="task">N3 選題確認</span>
-              <div class="meta-line">
-                <span class="team-tag p">企劃</span>
-                <span class="dl">DL 2026-05-05</span>
-              </div>
-            </div>
-            <div class="todo-item">
-              <div class="row1l"><span class="ip">年裕</span><span class="age">2 天後</span></div>
-              <span class="task">N3 選題確認</span>
-              <div class="meta-line">
-                <span class="team-tag p">企劃</span>
-                <span class="dl">DL 2026-05-06</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="todo-group week">
-          <div class="todo-group-head">
-            <span class="ic">🔵</span><span>當週需完成（4–7 天）</span><span class="cnt">1 件</span>
-          </div>
-          <div class="todo-list">
-            <div class="todo-item">
-              <div class="row1l"><span class="ip">雨暘</span><span class="age">4 天後</span></div>
+              <div class="row1l"><span class="ip">雨暘</span><span class="age">過 4 天</span></div>
               <span class="task">第三期企劃腳本</span>
-              <div class="meta-line">
-                <span class="team-tag p">企劃</span>
-                <span class="dl">DL 2026-05-08</span>
-              </div>
+              <div class="meta-line"><span class="team-tag p">企劃</span><span class="dl">DL 2026-05-08</span></div>
+            </div>
+            <div class="todo-item">
+              <div class="row1l"><span class="ip">雨暘</span><span class="age">今日 DL</span></div>
+              <span class="task">第三期腳本會議</span>
+              <div class="meta-line"><span class="team-tag p">企劃</span><span class="dl">DL 2026-05-12</span></div>
             </div>
           </div>
         </div>
-
+        <div class="todo-group three">
+          <div class="todo-group-head"><span class="ic">🟠</span><span>三天內須完成</span><span class="cnt">2 件</span></div>
+          <div class="todo-list">
+            <div class="todo-item">
+              <div class="row1l"><span class="ip">年裕</span><span class="age">3 天後</span></div>
+              <span class="task">第三期企劃腳本</span>
+              <div class="meta-line"><span class="team-tag p">企劃</span><span class="dl">DL 2026-05-15</span></div>
+            </div>
+            <div class="todo-item">
+              <div class="row1l"><span class="ip">雨暘</span><span class="age">3 天後</span></div>
+              <span class="task">第三期拍攝行前會</span>
+              <div class="meta-line"><span class="team-tag s">拍攝</span><span class="dl">DL 2026-05-15</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="todo-group week">
+          <div class="todo-group-head"><span class="ic">🔵</span><span>當週需完成（4–7 天）</span><span class="cnt">1 件</span></div>
+          <div class="todo-list">
+            <div class="todo-item">
+              <div class="row1l"><span class="ip">雨暘</span><span class="age">6 天後</span></div>
+              <span class="task">第三期拍攝日</span>
+              <div class="meta-line"><span class="team-tag s">拍攝</span><span class="dl">DL 2026-05-18</span></div>
+            </div>
+          </div>
+        </div>
       </div>
-
       <div class="mgr-banner">
         <span class="ic">📋</span>
         <span>主管想加除了專案進度之外的交辦任務（會議、客戶聯繫、行政等），請填寫 <b>「主管任務表.xlsx」</b> 並上傳到 Drive。明日 09:00 會自動依「填寫時間 / 完成時間」併到對應的緊急度欄位。組別下拉：企劃 / 拍攝 / 剪輯 / PM。</span>
@@ -373,80 +310,32 @@ a:hover { text-decoration: underline; }
     </div>
     <div class="card-body">
       <div class="ah-block">
-        <div class="ah-title">
-          <span class="ic">📊</span>
-          <span>每週週會回報（當月累計）</span>
-          <span class="when">企劃 / 拍攝 / 剪輯 / PM 各組分別回報</span>
-        </div>
+        <div class="ah-title"><span class="ic">📊</span><span>每週週會回報（當月累計）</span><span class="when">企劃 / 拍攝 / 剪輯 / PM 各組分別回報</span></div>
         <div class="ah-grid4">
-          <div class="ah-item">
-            <span class="num">1</span>
-            <div class="body">
-              <b>累計完成腳本支數</b>
-              <span class="hint">本月 1 號至今</span>
-            </div>
-          </div>
-          <div class="ah-item">
-            <span class="num">2</span>
-            <div class="body">
-              <b>累計完成影片支數</b>
-              <span class="hint">已交付</span>
-            </div>
-          </div>
-          <div class="ah-item">
-            <span class="num">3</span>
-            <div class="body">
-              <b>累計出機次數</b>
-              <span class="hint">每次帶回幾支片</span>
-            </div>
-          </div>
-          <div class="ah-item">
-            <span class="num">4</span>
-            <div class="body">
-              <b>下週預計完成數</b>
-              <span class="hint">腳本 / 影片 / 拍攝</span>
-            </div>
-          </div>
+          <div class="ah-item"><span class="num">1</span><div class="body"><b>累計完成腳本支數</b><span class="hint">本月 1 號至今</span></div></div>
+          <div class="ah-item"><span class="num">2</span><div class="body"><b>累計完成影片支數</b><span class="hint">已交付</span></div></div>
+          <div class="ah-item"><span class="num">3</span><div class="body"><b>累計出機次數</b><span class="hint">每次帶回幾支片</span></div></div>
+          <div class="ah-item"><span class="num">4</span><div class="body"><b>下週預計完成數</b><span class="hint">腳本 / 影片 / 拍攝</span></div></div>
         </div>
-        <div class="ah-fallback">
-          <b>⚠ 週會暫停時：</b>當週最後一個工作日於各組別 LINE 群回報以上 4 項。
-        </div>
+        <div class="ah-fallback"><b>⚠ 週會暫停時：</b>當週最後一個工作日於各組別 LINE 群回報以上 4 項。</div>
       </div>
-
       <div class="ah-block" style="margin-top: 12px; border-color: #c4b5fd; background: linear-gradient(135deg, #ede9fe 0%, #f0f9ff 100%);">
-        <div class="ah-title">
-          <span class="ic">📅</span>
-          <span>每月 19 號回報</span>
-          <span class="when">19 號當天工作日提醒（遇假日順延 / 提前）</span>
-        </div>
+        <div class="ah-title"><span class="ic">📅</span><span>每月 19 號回報</span><span class="when">19 號當天工作日提醒（遇假日順延 / 提前）</span></div>
         <div class="ah-grid4" style="grid-template-columns: 1fr 1fr;">
-          <div class="ah-item" style="background: rgba(255,255,255,0.85);">
-            <span class="num" style="color: #6d28d9;">1</span>
-            <div class="body">
-              <b>20 號前完成請款</b>
-            </div>
-          </div>
-          <div class="ah-item" style="background: rgba(255,255,255,0.85);">
-            <span class="num" style="color: #6d28d9;">2</span>
-            <div class="body">
-              <b>上月人員請假狀況</b>
-            </div>
-          </div>
+          <div class="ah-item" style="background: rgba(255,255,255,0.85);"><span class="num" style="color: #6d28d9;">1</span><div class="body"><b>20 號前完成請款</b></div></div>
+          <div class="ah-item" style="background: rgba(255,255,255,0.85);"><span class="num" style="color: #6d28d9;">2</span><div class="body"><b>上月人員請假狀況</b></div></div>
         </div>
-        <div class="ah-fallback" style="border-left-color: #c4b5fd;">
-          <b>每月 19 號（工作日）：</b>本區塊會跳到 01 待辦事項「當天提醒」最上面。請款若遇假日提前到最近一個工作日；請假狀況請彙整成上月排程文件並貼到 PM LINE 群。
-        </div>
+        <div class="ah-fallback" style="border-left-color: #c4b5fd;"><b>每月 19 號（工作日）：</b>本區塊會跳到 01 待辦事項「當天提醒」最上面。請款若遇假日提前到最近一個工作日；請假狀況請彙整成上月排程文件並貼到 PM LINE 群。</div>
       </div>
     </div>
   </section>
 </div>
 
 <div class="grid row1">
-
   <section class="card">
     <div class="card-head">
       <h2><span class="num n3">03</span>各 IP 剪輯進度</h2>
-      <span class="meta">剪輯總表 · 5 步流程 · 完檔提交 = TRUE 才算完成</span>
+      <span class="meta">剪輯總表 · 5 步流程 · 完檔提交 = TRUE 才算完成 · 「一_」第一期 / 「二_」第二期</span>
     </div>
     <div class="card-body">
       <div class="ip-tabs" id="ipTabs"></div>
@@ -471,48 +360,38 @@ a:hover { text-decoration: underline; }
     </div>
     <div class="card-body">
       <div class="mblock">
-        <div class="mtitle"><b>腳本累積（企劃）· 5 月</b><span class="delta flat">0%</span></div>
-        <div class="subtrack-label" style="margin-bottom: 4px; padding: 0;">
-          <span><b>✓ 5 月累積完成</b></span>
-          <span class="mono">0 <span style="color: var(--ink-soft); font-weight: 500;">/ 80 支</span></span>
-        </div>
-        <div class="dualbar"><div class="fill s" style="width: 0%;"></div></div>
+        <div class="mtitle"><b>腳本累積（企劃）· 5 月</b><span class="delta up">▲ 第三期啟動</span></div>
+        <div class="subtrack-label" style="margin-bottom: 4px; padding: 0;"><span><b>✓ 5 月累積完成</b></span><span class="mono">7 <span style="color: var(--ink-soft); font-weight: 500;">/ 80 支</span></span></div>
+        <div class="dualbar"><div class="fill s" style="width: 8.75%;"></div></div>
         <div class="subtrack">
-          <div class="subtrack-label">
-            <span><b>⏳ 進行中</b></span>
-            <span class="mono">20 <span style="color: var(--ink-soft); font-weight: 500;">支</span></span>
-          </div>
+          <div class="subtrack-label"><span><b>⏳ 進行中</b></span><span class="mono">20 <span style="color: var(--ink-soft); font-weight: 500;">支</span></span></div>
           <div class="dualbar"><div class="fill ip" style="width: 25%;"></div></div>
-          <div style="font-size: 10px; color: var(--ink-soft); margin-top: 4px;">月度目標 <b style="color: var(--ink);">80 支</b> · W18 進行中 20 支 · 本週完成 0 支</div>
+          <div style="font-size: 10px; color: var(--ink-soft); margin-top: 4px;">月度目標 <b style="color: var(--ink);">80 支</b> · W19 進行中 20 支 · 本週完成 0 支</div>
           <div style="font-size: 10px; color: var(--ink-soft); margin-top: 6px; line-height: 1.55;">
-            <b style="color: var(--ink);">進行中 20：</b>雨暘 10 + 年裕 10<br>
+            <b style="color: var(--ink);">5 月已完成 7：</b>雨暘 N3 選題 + 年裕 N3 選題 + 棋勝副總社群建議書 + 棋勝區經理社群建議書 + 其他<br>
+            <b style="color: var(--ink);">進行中 20：</b>第三期企劃腳本（雨暘逾期 / 年裕 5/15 / 小貝 5/25）+ 第三期腳本會議 + 棋勝雙線第二期<br>
             <span style="color: var(--ink-soft);">📁 4 月最終結算：企畫完成 60 支</span>（翰哥 10 + 丹哥 7 + 雨暘 5 + T大 9 + WE 17 + 阿志 8 + 雙毒 4）
           </div>
         </div>
       </div>
       <div class="mblock">
-        <div class="mtitle"><b>影片累積（剪輯）· 5 月</b><span class="delta flat">0%</span></div>
-        <div class="subtrack-label" style="margin-bottom: 4px; padding: 0;">
-          <span><b>✓ 5 月累積完成</b></span>
-          <span class="mono">0 <span style="color: var(--ink-soft); font-weight: 500;">/ 80 支</span></span>
-        </div>
-        <div class="dualbar"><div class="fill e" style="width: 0%;"></div></div>
+        <div class="mtitle"><b>影片累積（剪輯）· 5 月</b><span class="delta up">▲ 13 支已上架</span></div>
+        <div class="subtrack-label" style="margin-bottom: 4px; padding: 0;"><span><b>✓ 5 月累積完成</b></span><span class="mono">13 <span style="color: var(--ink-soft); font-weight: 500;">/ 80 支</span></span></div>
+        <div class="dualbar"><div class="fill e" style="width: 16.25%;"></div></div>
         <div class="subtrack">
-          <div class="subtrack-label">
-            <span><b>⏳ 進行中</b></span>
-            <span class="mono">25 <span style="color: var(--ink-soft); font-weight: 500;">支</span></span>
-          </div>
-          <div class="dualbar"><div class="fill ip" style="width: 31.25%;"></div></div>
-          <div style="font-size: 10px; color: var(--ink-soft); margin-top: 4px;">月度目標 <b style="color: var(--ink);">80 支</b> · W18 進行中 25 支 · 本週完成 0 支</div>
+          <div class="subtrack-label"><span><b>⏳ 進行中</b></span><span class="mono">51 <span style="color: var(--ink-soft); font-weight: 500;">支</span></span></div>
+          <div class="dualbar"><div class="fill ip" style="width: 63.75%;"></div></div>
+          <div style="font-size: 10px; color: var(--ink-soft); margin-top: 4px;">月度目標 <b style="color: var(--ink);">80 支</b> · W19 進行中 51 支 · 本週完成 0 支</div>
           <div style="font-size: 10px; color: var(--ink-soft); margin-top: 6px; line-height: 1.55;">
-            <b style="color: var(--ink);">進行中 25：</b>丹哥 10 + 翰哥 9 + 雨暘 6<br>
+            <b style="color: var(--ink);">5 月已上架 13：</b>小貝 3（5/1·5/5·5/8）+ 雨暘 3（5/1·5/4·5/8）+ 年裕 2（5/2·5/8）+ 曉琪 2 + 雙毒 2 + WE 1<br>
+            <b style="color: var(--ink);">進行中 51：</b>丹哥 10（客審中）+ 翰哥 9 + 雨暘第二期 11 + 小貝第二期 10 + 年裕第二期 11<br>
             <span style="color: var(--ink-soft);">📁 4 月最終結算：剪輯完成 46 支</span>（小貝 6 + 雨暘 7 + T大 10 + WE 11 + 阿志 8 + 雙毒 1 + 長片 3）
           </div>
         </div>
       </div>
       <div class="mhint">
-        <b>W18（5/4–5/10）最新填寫：</b>腳本進行中 20 支（雨暘 10 + 年裕 10）、影片進行中 25 支（丹哥 10 + 翰哥 9 + 雨暘 6）。本週尚未有完成支數，5 月累積仍 0/80（每月 1 號歸零）。<br>
-        <span style="color: var(--ink-soft);">📌 4 月最終：腳本 60/80（75%）、影片 46/80（58%）— 已歸檔。</span>
+        <b>W19（5/11–5/17）同步：</b>5 月已上架 13 支（16.3%）、進行中 51 支 — 全部完成後可達約 80%。<br>
+        <span style="color: var(--ink-soft);">📌 4 月最終：腳本 60/80（75%）、影片 46/80（58%）— 已歸檔。口徑：「5 月已完成」= 上架日落在 5/1–5/31 且完檔提交＝TRUE。</span>
       </div>
     </div>
   </section>
@@ -527,54 +406,54 @@ a:hover { text-decoration: underline; }
     <div class="card-body">
       <div class="algo">
         <div class="platform">
-          <div class="p-head p-tt"><span class="name">TikTok</span><span class="trend">▲ 從秒爆轉向續看</span></div>
+          <div class="p-head p-tt"><span class="name">TikTok</span><span class="trend">▲ 85% 完成率懸崖 · 4× 加成</span></div>
           <div class="p-body">
-            <div class="signal"><span>完成率門檻</span><span class="v">≥ 70%</span></div>
-            <div class="signal"><span>推薦影片長度</span><span class="v">3–5 分</span></div>
-            <div class="signal"><span>分享 / 收藏權重</span><span class="v">遠高於讚</span></div>
-            <div class="signal"><span>粉絲數作為訊號</span><span class="v">官方否認</span></div>
-            <p class="p-key"><b>核心：</b>2026 年 follower-first 測試，每支獨立評估，靠完成率上推。</p>
-            <div class="p-action"><b>本週試試：</b>把 30 秒以內的選題改寫成 60–90 秒 · 前 3 秒鉤子重做 · CTA 從「按讚」改成「存起來」。</div>
+            <div class="signal"><span>完成率門檻</span><span class="v">70–75%</span></div>
+            <div class="signal"><span>完成率懸崖</span><span class="v">≥ 85% → 4×</span></div>
+            <div class="signal"><span>最佳影片長度</span><span class="v">45–75 秒</span></div>
+            <div class="signal"><span>排名權重 #1</span><span class="v">觀看完成率</span></div>
+            <p class="p-key"><b>核心：</b>follower-first 持續強化，前幾天先推給粉絲；若粉絲完成率 / 分享 / 收藏夠強，再推非粉絲。85% 完成率為「懸崖」分發倍率躍升 4 倍。</p>
+            <div class="p-action"><b>本週試試：</b>長度鎖在 45–75 秒、卡 85% 完成率紅線設計；前 3 秒鉤子重做；CTA 改成「存起來」或「傳給朋友」。</div>
             <div class="p-source">
               <div class="src-label">來源 · 公告 / 觀察日期</div>
-              <span class="src"><span class="date mono">2026-Q1</span><a href="https://sproutsocial.com/insights/tiktok-algorithm/" target="_blank">Sprout Social｜How the TikTok Algorithm Works in 2026</a></span>
-              <span class="src"><span class="date mono">2026-03</span><a href="https://www.opus.pro/blog/tiktoks-new-algorithm-2026" target="_blank">OpusClip｜TikTok's New Algorithm 2026</a></span>
-              <span class="src"><span class="date mono">2026</span><a href="https://www.socialync.io/blog/tiktok-viral-retention-rate-2026" target="_blank">Socialync｜70% Completion Rate Rule in 2026</a></span>
-              <span style="color: var(--ink-soft); display:block; margin-top:4px;">※ 70% 門檻屬業界觀察，非 TikTok 官方公告</span>
+              <span class="src"><span class="date mono">2026-05</span><a href="https://www.socialboostdigital.com/blog/tiktok-algorithm-2026-view-velocity" target="_blank">SocialBoost｜2026 TikTok View Velocity Update</a></span>
+              <span class="src"><span class="date mono">2026-05</span><a href="https://www.syncstudio.ai/blog/tiktok-algorithm-2026" target="_blank">SyncStudio｜TikTok Follower-First Update 2026</a></span>
+              <span class="src"><span class="date mono">2026-Q2</span><a href="https://sproutsocial.com/insights/tiktok-algorithm/" target="_blank">Sprout Social｜TikTok Algorithm 2026</a></span>
+              <span style="color: var(--ink-soft); display:block; margin-top:4px;">※ 85% 懸崖 & 4× 加成屬業界觀察，非 TikTok 官方公告</span>
             </div>
           </div>
         </div>
         <div class="platform">
-          <div class="p-head p-ig"><span class="name">Reels</span><span class="trend">▲ "Your Algorithm" 全球上線</span></div>
+          <div class="p-head p-ig"><span class="name">Reels</span><span class="trend">▲ 1 DM 分享 ≈ 15 個讚</span></div>
           <div class="p-body">
-            <div class="signal"><span>最強分發訊號</span><span class="v">DM 分享</span></div>
-            <div class="signal"><span>判定推不推薦</span><span class="v">前 1–2 秒</span></div>
-            <div class="signal"><span>Reels 上限</span><span class="v">20 分鐘</span></div>
-            <div class="signal"><span>原創性檢查</span><span class="v">嚴格</span></div>
-            <p class="p-key"><b>核心：</b>用戶可自選想看主題，DM 轉發為真正成長引擎，浮水印素材會降觸及。</p>
-            <div class="p-action"><b>本週試試：</b>第一句直給結論 · 不放外站浮水印 · 試一支 5–10 分鐘 BTS / 教學系列。</div>
+            <div class="signal"><span>排名 #1</span><span class="v">DM 分享</span></div>
+            <div class="signal"><span>排名 #2 / #3</span><span class="v">完成率 / 收藏</span></div>
+            <div class="signal"><span>DM 換算</span><span class="v">1 share ≈ 15 likes</span></div>
+            <div class="signal"><span>讚的權重</span><span class="v">最低</span></div>
+            <p class="p-key"><b>核心：</b>Mosseri 確認 2026 三大訊號＝watch time / likes per reach / DM shares。順位：DM 分享 ＞ 完成率 ＞ 收藏 ＞ 留言 ＞ 限動轉發 ＞ 讚。500 讚 + 50 DM 會贏 5000 讚 + 5 DM。</p>
+            <div class="p-action"><b>本週試試：</b>結尾改成「傳給會懂的朋友」的 hook；做「群組梗 / 朋友間共鳴」內容；前 1–2 秒直給結論；移除外站浮水印。</div>
             <div class="p-source">
               <div class="src-label">來源 · 公告 / 觀察日期</div>
-              <span class="src"><span class="date mono">2025-12-10</span><a href="https://techcrunch.com/2025/12/10/instagrams-new-your-algorithm-tool-gives-you-more-control-over-the-reels-you-see/" target="_blank">TechCrunch｜Instagram launches "Your Algorithm" tool</a></span>
-              <span class="src"><span class="date mono">2025-12</span><a href="https://about.instagram.com/blog/announcements/reels-algorithm-control" target="_blank">Instagram 官方 Blog｜New Way to Control Your Reels Algorithm</a></span>
-              <span class="src"><span class="date mono">2026-Q1</span><a href="https://buffer.com/resources/instagram-algorithms/" target="_blank">Buffer｜Instagram Algorithm 2026 Guide</a></span>
+              <span class="src"><span class="date mono">2026-04</span><a href="https://www.dataslayer.ai/blog/instagram-algorithm-2025-complete-guide-for-marketers" target="_blank">DataSlayer｜Mosseri 確認 5 大 Reels 訊號（4 月更新）</a></span>
+              <span class="src"><span class="date mono">2026-Q2</span><a href="https://buffer.com/resources/instagram-algorithms/" target="_blank">Buffer｜Instagram Algorithm 2026 Guide</a></span>
+              <span class="src"><span class="date mono">2026-Q2</span><a href="https://goso.io/instagram-updates/instagram-algorithm-change-2026/" target="_blank">GOSO｜2026 IG 4 大訊號變動</a></span>
             </div>
           </div>
         </div>
         <div class="platform">
-          <div class="p-head p-yt"><span class="name">YT Shorts</span><span class="trend">▲ 與長片演算法脫鉤</span></div>
+          <div class="p-head p-yt"><span class="name">YT Shorts</span><span class="trend">▲ 滑過率 35–40% = 死亡線</span></div>
           <div class="p-body">
-            <div class="signal"><span>主要訊號</span><span class="v">滑過率 / loop</span></div>
-            <div class="signal"><span>滿意度調查</span><span class="v">&gt; 觀看時長</span></div>
-            <div class="signal"><span>Shorts 上限</span><span class="v">3 分鐘</span></div>
-            <div class="signal"><span>Shorts ↔ 長片</span><span class="v">已脫鉤</span></div>
-            <p class="p-key"><b>核心：</b>Shorts 表現不再拖累長片。loop 與滑過率是主軸，「不感興趣」+ 問卷修正推薦。</p>
-            <div class="p-action"><b>本週試試：</b>結尾接回頭設計（loop bait）· 長度測 60–180 秒 · 標題避免誤導。</div>
+            <div class="signal"><span>滑過率死亡線</span><span class="v">&gt; 35–40%</span></div>
+            <div class="signal"><span>留言時間</span><span class="v">計入觀看時長</span></div>
+            <div class="signal"><span>留存品質</span><span class="v">&gt; 200% loop</span></div>
+            <div class="signal"><span>YPP 計算</span><span class="v">Engaged Views</span></div>
+            <p class="p-key"><b>核心：</b>2026 強化「留存品質」：40 秒 / 85% 完成率打贏 200% loop。Swipe-away &gt; 35–40% 等同沒救。留言時所花時間也計入觀看時長 → 留言區互動越久越好。</p>
+            <div class="p-action"><b>本週試試：</b>長度測 40–60 秒、目標完成率 85%；前 2 秒明確主題避免被滑過；結尾丟「你覺得呢？」引留言；標題不要誤導（影響滿意度問卷）。</div>
             <div class="p-source">
               <div class="src-label">來源 · 公告 / 觀察日期</div>
-              <span class="src"><span class="date mono">2026-01</span><a href="https://miraflow.ai/blog/youtube-shorts-algorithm-update-january-2026" target="_blank">Miraflow｜YouTube Shorts Algorithm Update: January 2026</a></span>
-              <span class="src"><span class="date mono">2025-12</span><a href="https://www.dataslayer.ai/blog/youtubes-december-2025-algorithm-update-browse-feed-cut-long-videos-by-80" target="_blank">DataSlayer｜YT Algorithm December 2025 Update</a></span>
-              <span class="src"><span class="date mono">2026-Q1</span><a href="https://outlierkit.com/resources/youtube-algorithm-updates/" target="_blank">OutlierKit｜YouTube Algorithm Updates 2026</a></span>
+              <span class="src"><span class="date mono">2026-05</span><a href="https://alfawaz.tech/youtube-shorts-views-dropping-2026/" target="_blank">alfawaz.tech｜YT Shorts Algorithm Changed 2026</a></span>
+              <span class="src"><span class="date mono">2026-Q2</span><a href="https://vidiq.com/blog/post/youtube-shorts-algorithm/" target="_blank">vidIQ｜YouTube Shorts Algorithm 2026</a></span>
+              <span class="src"><span class="date mono">2026-Q2</span><a href="https://outlierkit.com/resources/youtube-algorithm-updates/" target="_blank">OutlierKit｜YouTube Algorithm Updates 2026</a></span>
             </div>
           </div>
         </div>
@@ -587,7 +466,7 @@ a:hover { text-decoration: underline; }
 </div>
 
 <div class="foot">
-  v12.9 · W18 進行中已回填 · BUILD 2026-05-04 · <a href="https://yo053925-del.github.io/daily-working-day/">daily-working-day</a>
+  v13.3 · 對齊 5/11 表格實況 · BUILD 2026-05-12 · <a href="https://yo053925-del.github.io/daily-working-day/">daily-working-day</a>
 </div>
 
 <script>
@@ -598,33 +477,43 @@ a:hover { text-decoration: underline; }
     var pad = function(n){return n<10?('0'+n):(''+n);};
     var s = d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' 星期'+days[d.getDay()];
     var el = document.getElementById('hello-date');
-    if (el) el.textContent = s + ' · 第 19 週 · Q2';
+    if (el) el.textContent = s + ' · 第 20 週 · Q2';
   } catch(e) {}
 
   var ipsData = [
     {
-      name: '小貝', client: '小貝', contract: '內部經紀約',
-      phase: '第一期',
-      status: 'awaiting',
-      phase1: { done: 10, total: 10 },
-      nextPhase: '第二期',
-      nextMilestone: 'N3 選題確認',
-      nextDl: '2026-05-18',
-      nextNote: 'N2 第一支影片提供已交付 ✓（4/27），第二期素材已進入剪輯流程；下個關卡 N3 選題確認 DL 5/18',
-      done: ['1_刮刮樂篇', '2_低軌道衛星1', '3_低軌道衛星2', '4_光通訊1', '5_光通訊2', '6_ABF載板', '7_封測', '8_有些事情你要先相信', '9_寵妻大禮', '10_虧損500萬的故事'],
-      inProgress: []
+      name: '小貝', client: '小貝', contract: '內部經紀約 · 第一期完檔 + 第二期進行中',
+      phase: '第二期',
+      done: ['一_1_刮刮樂篇', '一_2_低軌道衛星1', '一_3_低軌道衛星2', '一_4_光通訊1', '一_5_光通訊2', '一_6_ABF載板', '一_7_封測', '一_8_有些事情你要先相信', '一_9_寵妻大禮', '一_10_虧損500萬的故事'],
+      inProgress: [
+        { t: '二_1_科學與玄學大對決-抽盲盒篇', editor: 'Kimi', step: -1 },
+        { t: '二_2_ASIC訂製品片', editor: 'Kimi', step: 1 },
+        { t: '二_3_電力基建', editor: 'Kimi', step: -1 },
+        { t: '二_4_CoWoS設備', editor: 'Kimi', step: 0 },
+        { t: '二_5_完成比完美更重要', editor: 'Kimi', step: -1 },
+        { t: '二_6_想得到一樣東西，最可靠的方法是讓自己配得上它', editor: 'Kimi', step: -1 },
+        { t: '二_7_過年吃大餐都在幫王品賺年終', editor: 'Kimi', step: 0 },
+        { t: '二_8_從賣便當到營收新高，雄獅的生存奇蹟', editor: 'Kimi', step: -1 },
+        { t: '二_9_只是想買髮圈，揭密寶雅的商業魔法', editor: 'Kimi', step: -1 },
+        { t: '二_10_挑戰苦讀投資理財書籍24小時', editor: 'Kimi', step: -1 }
+      ]
     },
     {
-      name: '雨暘', client: '券世雨師傅', contract: '正式合約 · 第一期',
-      phase: '第一期',
-      done: ['1_暴漲前的跳高訊號', '3_帶薪拉屎', '6_月薪配錶年薪配車', '9_分析師怎看4'],
+      name: '雨暘', client: '券世雨師傅', contract: '正式合約 · 第二期進行中',
+      phase: '第二期',
+      done: [],
       inProgress: [
-        { t: '2_一分鐘看懂量比價先行', editor: 'Kimi', step: 1 },
-        { t: '4_實際計算蹭朋友車', editor: '郭', step: 3 },
-        { t: '5_實際計算居家辦公', editor: 'Jenny', step: 3 },
-        { t: '7_集體平庸的表現', editor: 'Kimi', step: 3 },
-        { t: '8_什麼是量化交易', editor: 'Jenny', step: 3 },
-        { t: '10_泛流量 客人警慎不太聰明', editor: 'Kimi', step: 3 }
+        { t: '二_1_台積電站回關鍵均線，台股盤勢就穩了嗎？', editor: 'Jenny', step: 0 },
+        { t: '二_2_一分鐘教你看景氣循環股的W底密碼', editor: 'Jenny', step: -1 },
+        { t: '二_3_題材爆紅時，怎麼分辨真突破還是新聞行情', editor: 'Jenny', step: 1 },
+        { t: '二_4_LINE 已讀不回一年，可以省多少錢？', editor: '三金', step: 1 },
+        { t: '二_5_買手搖飲堅持去冰，一年能白嫖多少錢？', editor: '三金', step: -1 },
+        { t: '二_6_常畫飾仔一年到底會浪費多少錢？', editor: '三金', step: -1 },
+        { t: '二_7_什麼是量化交易？', editor: 'Kimi', step: 0 },
+        { t: '二_8_精緻窮是年輕人財務自由的絆腳石？', editor: 'Kimi', step: -1 },
+        { t: '二_9_養一個孩子到成年要花多少錢？', editor: 'Kimi', step: -1 },
+        { t: '二_10_【節奏挑戰】台股版', editor: '三金', step: 0 },
+        { t: '二_11_假如中了1000萬', editor: 'Kimi', step: -1 }
       ]
     },
     {
@@ -661,15 +550,22 @@ a:hover { text-decoration: underline; }
       ]
     },
     {
-      name: '年裕', client: '月干老闆', contract: '內部經紀約',
-      phase: '第一期',
-      status: 'awaiting',
-      phase1: { done: 9, total: 9 },
-      nextPhase: '第二期',
-      nextDl: '2026-04-27',
-      nextNote: 'N2 第一支影片提供 DL 已過 7 天，行程確認 TRUE 但行程完成尚未勾選',
-      done: ['1_五萬請人VS十萬外包', '2_我當老闆還沒遇過能力比我強的員工', '3_當老闆最重要的核心能力', '4_員工善良VS能力強', '5_老闆理想的好老闆', '6_脫口秀當沖的秘訣', '7_脫口秀窮人的思維', '8_脫口秀股市的代稱', '9_如何辨識好老闆'],
-      inProgress: []
+      name: '年裕', client: '月干老闆', contract: '內部經紀約 · 第一期完檔 + 第二期進行中',
+      phase: '第二期',
+      done: ['一_1_五萬請人VS十萬外包', '一_2_我當老闆還沒遇過能力比我強的員工', '一_3_當老闆最重要的核心能力', '一_4_員工善良VS能力強', '一_5_老闆理想的好老闆', '一_6_脫口秀當沖的秘訣', '一_7_脫口秀窮人的思維', '一_8_脫口秀股市的代稱', '一_9_如何辨識好老闆'],
+      inProgress: [
+        { t: '二_1_月薪高年終低vs月薪低年終高', editor: 'Jenny', step: 2 },
+        { t: '二_2_勞退自提vs0050', editor: 'Kimi', step: 0 },
+        { t: '二_3_先記帳控管vs先提升收入', editor: 'Kimi', step: 0 },
+        { t: '二_4_我多睡一個小時就不會睏子了沒了', editor: 'Kimi', step: -1 },
+        { t: '二_5_不睡覺拔牙拔到送急診啦', editor: '郭', step: 0 },
+        { t: '二_6_老闆的報復性消費', editor: 'Kimi', step: 0 },
+        { t: '二_7_老闆的自我實現', editor: 'Kimi', step: -1 },
+        { t: '二_8_旁白型影片', editor: 'Kimi', step: 0 },
+        { t: '二_9_肝老師講幹話', editor: 'Kimi', step: 0 },
+        { t: '二_10_肝老師講幹話', editor: 'Kimi', step: 0 },
+        { t: '二_11_肝老師講幹話', editor: 'Kimi', step: 0 }
+      ]
     }
   ];
 
@@ -693,7 +589,7 @@ a:hover { text-decoration: underline; }
       var classes = 'ip-tab' + (i===activeIp?' active':'') + (isZero?' zero':'') + (isAwaiting?' awaiting':'');
       var subText, pillNum;
       if (isAwaiting) {
-        subText = '⏳ 等候 ' + ip.nextPhase;
+        subText = ip.phase2InProgress ? ('🎬 ' + ip.nextPhase + ' 進行中') : ('⏳ 等候 ' + ip.nextPhase);
         pillNum = ip.phase1.done;
       } else if (isZero) {
         subText = '✓ 全部完成';
@@ -741,17 +637,23 @@ a:hover { text-decoration: underline; }
     var pane = document.getElementById('paneContent');
 
     if (ip.status === 'awaiting') {
-      document.getElementById('ipContract').textContent = ip.contract + ' · 第一期 ' + ip.phase1.done + '/' + ip.phase1.total + ' 完檔 · ' + ip.nextPhase + ' 等候進入剪輯';
+      var p2 = ip.phase2InProgress;
+      var phaseLabel = p2 ? ' 剪輯進行中' : ' 等候進入剪輯';
+      var subText = p2
+        ? ('第一期已 100% 完檔，' + ip.nextPhase + ' 剪輯已啟動進行中（具體支數待剪輯總表第二期回填）')
+        : ('第一期已 100% 完檔，' + ip.nextPhase + ' 素材尚未進入剪輯流程');
+      var p2Status = p2 ? '進行中 · 待回填' : '尚無資料';
+      document.getElementById('ipContract').textContent = ip.contract + ' · 第一期 ' + ip.phase1.done + '/' + ip.phase1.total + ' 完檔 · ' + ip.nextPhase + phaseLabel;
       document.getElementById('pageNum').textContent = '— / —';
       document.getElementById('prevBtn').disabled = true;
       document.getElementById('nextBtn').disabled = true;
       pane.innerHTML = '<div class="awaiting-state">' +
         '<div class="icon">🎬</div>' +
-        '<div class="title">' + ip.nextPhase + ' 等候進入剪輯</div>' +
-        '<div class="sub">第一期已 100% 完檔，' + ip.nextPhase + ' 素材尚未進入剪輯流程</div>' +
+        '<div class="title">' + ip.nextPhase + phaseLabel + '</div>' +
+        '<div class="sub">' + subText + '</div>' +
         '<div class="phase-card">' +
           '<div class="row"><span class="k">第一期完檔</span><span class="v">' + ip.phase1.done + ' / ' + ip.phase1.total + ' ✓</span></div>' +
-          '<div class="row"><span class="k">' + ip.nextPhase + '剪輯總表</span><span class="v">尚無資料</span></div>' +
+          '<div class="row"><span class="k">' + ip.nextPhase + ' 剪輯總表</span><span class="v">' + p2Status + '</span></div>' +
         '</div>' +
         '<div class="next-dl">⚠ 下個關卡：' + ip.nextPhase + ' ' + (ip.nextMilestone || 'N2 第一支影片提供') + ' · DL <b>' + ip.nextDl + '</b></div>' +
         '<div style="margin-top: 10px; font-size: 10.5px; color: var(--ink-soft); max-width: 480px; margin-left: auto; margin-right: auto;">' + escapeHtml(ip.nextNote) + '</div>' +
@@ -778,7 +680,7 @@ a:hover { text-decoration: underline; }
     var totalPages = Math.max(1, Math.ceil(ip.inProgress.length / PER_PAGE));
     if (page >= totalPages) page = totalPages - 1;
 
-    document.getElementById('ipContract').textContent = ip.contract + ' · 進行中 ' + ip.inProgress.length + ' 支 · 已完檔 ' + ip.done.length + ' 支';
+    document.getElementById('ipContract').textContent = ip.contract + ' · 進行中 ' + ip.inProgress.length + ' 支' + (ip.done.length > 0 ? ' · 已完檔 ' + ip.done.length + ' 支' : '');
     document.getElementById('pageNum').textContent = (page + 1) + ' / ' + totalPages;
     document.getElementById('prevBtn').disabled = (page === 0);
     document.getElementById('nextBtn').disabled = (page === totalPages - 1);
